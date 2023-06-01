@@ -20,6 +20,7 @@ jobs:
         with:
           title: "Release: $version"
           tag: "v$semver"
+          changelog-entry: "[$version]"
           draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
