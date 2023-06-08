@@ -40,7 +40,7 @@
     "url": "https://github.com/shgysk8zer0/npm-template/issues"
   },
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
-  "dependencies": {
+  "devDependencies": {
     "@shgysk8zer0/js-utils": "^1.0.0"
   }
 }
