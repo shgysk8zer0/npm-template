@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.4] - 2023-06-08
+
+### Added
+- Install `@shgysk8zer0/npm-utils`
+- Add `exports` to package config
+
+### Removed
+- Uninstall `rollup`, `eslint`
+
+### Changed
+- Use `getConfig()` from `@shgysk8zer0/js-utils/rollup` for rollup config
+
 ## [v1.0.3] - 2023-06-01
 
 ### Fixed
