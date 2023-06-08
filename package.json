@@ -1,22 +1,29 @@
 {
   "name": "npm-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A template repo for npm packages",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
+  "exports": {
+    "./*": {
+      "import": "./*.js",
+      "require": "./*.cjs"
+    }
+  },
   "engines": {
     "node": ">=18.0.0"
   },
-  "type": "module",
   "private": false,
   "scripts": {
     "test": "npm run lint:js && npm run build",
     "preversion": "npm test",
-    "prepare": "npm run build:js",
+    "prepare": "npm run build",
+    "dev": "rollup -cw",
     "lint:js": "eslint .",
     "fix:js": "eslint. --fix",
     "build": "npm run build:js",
-    "dev": "rollup -cw",
-    "build:js": "rollup -c",
+    "build:js": "rollup -c rollup.config.js",
     "create:lock": "npm i --package-lock-only",
     "version:bump": "npm run version:bump:patch",
     "version:bump:patch": "npm version --no-git-tag-version patch",
@@ -33,8 +40,7 @@
     "url": "https://github.com/shgysk8zer0/npm-template/issues"
   },
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
-  "devDependencies": {
-    "eslint": "^8.42.0",
-    "rollup": "^3.24.0"
+  "dependencies": {
+    "@shgysk8zer0/js-utils": "^1.0.0"
   }
 }
