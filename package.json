@@ -6,6 +6,10 @@
   "main": "index.cjs",
   "module": "index.js",
   "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    },
     "./*": {
       "import": "./*.js",
       "require": "./*.cjs"
@@ -19,16 +23,15 @@
     "test": "npm run lint:js && npm run build",
     "preversion": "npm test",
     "prepare": "npm run build",
-    "dev": "rollup -cw",
     "lint:js": "eslint .",
     "fix:js": "eslint. --fix",
     "build": "npm run build:js",
     "build:js": "rollup -c rollup.config.js",
-    "create:lock": "npm i --package-lock-only",
+    "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",
     "version:bump": "npm run version:bump:patch",
-    "version:bump:patch": "npm version --no-git-tag-version patch",
-    "version:bump:minor": "npm version --no-git-tag-version minor",
-    "version:bump:major": "npm version --no-git-tag-version major"
+    "version:bump:patch": "npm version --no-git-tag-version patch && npm run create:lock",
+    "version:bump:minor": "npm version --no-git-tag-version minor && npm run create:lock",
+    "version:bump:major": "npm version --no-git-tag-version major && npm run create:lock"
   },
   "repository": {
     "type": "git",
@@ -36,6 +39,16 @@
   },
   "author": "Chris Zuber <admin@kernvalley.us>",
   "license": "MIT",
+  "funding": [
+    {
+      "type": "librepay",
+      "url": "https://liberapay.com/shgysk8zer0"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/shgysk8zer0"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/shgysk8zer0/npm-template/issues"
   },
