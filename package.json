@@ -1,6 +1,6 @@
 {
   "name": "npm-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A template repo for npm packages",
   "type": "module",
   "main": "index.cjs",

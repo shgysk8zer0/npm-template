@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.5] - 2023-07-02
+
 ### Added
 - Add `funding`
 
 ### Changed
+- Updated GitHub Actions workflows 
 - Update versioning & lock-file scripts
 - Update `.npmignore` & `.gitignore`
 
