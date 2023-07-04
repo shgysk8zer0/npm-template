@@ -54,6 +54,6 @@
   },
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
   "devDependencies": {
-    "@shgysk8zer0/js-utils": "^1.0.0"
+    "@shgysk8zer0/js-utils": "^1.0.1"
   }
 }
