@@ -1,14 +1,26 @@
 {
   "name": "npm-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A template repo for npm packages",
+  "keywords": [],
   "type": "module",
   "main": "index.cjs",
   "module": "index.js",
+  "unpkg": "./index.js",
   "exports": {
     ".": {
       "import": "./index.js",
       "require": "./index.cjs"
+    },
+    "./*.js": {
+      "import": "./*.js",
+      "require": "./*.cjs"
+    },
+    "./*.mjs": {
+      "import": "./*.js"
+    },
+    "./*.cjs": {
+      "require": "./*.cjs"
     },
     "./*": {
       "import": "./*.js",
@@ -24,7 +36,7 @@
     "preversion": "npm test",
     "prepare": "npm run build",
     "lint:js": "eslint .",
-    "fix:js": "eslint. --fix",
+    "fix:js": "eslint . --fix",
     "build": "npm run build:js",
     "build:js": "rollup -c rollup.config.js",
     "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",

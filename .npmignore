@@ -10,7 +10,9 @@ node_modules/
 importmap.json
 importmap.yaml
 *.config.js
+*.gz
 *.tgz
 *.log
 *.min.*
 *.map
+*.env
