@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.1] - 2023-09-24
+
+### Added
+- Add `unpkg` to `package.json`
+- Add badges in README
+
+### Changed
+- Update `exports` to `package.json` to handle wider variety
+
+### Fixed
+- Fix typo in `fix:js` script
+
 ### [v1.1.0] - 2023-07-03
 
 ### Changed

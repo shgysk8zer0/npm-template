@@ -30,5 +30,8 @@
         "no-async-promise-executor": 0,
         "no-prototype-builtins": 0
     },
-    "globals": {}
+    "globals": {
+      "globalThis": "readonly"
+    }
 }
+
