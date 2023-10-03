@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Setup to transpile all `./*.js` to `./cjs/*.cjs` (except `*.config.js`)
+- Update `exports` and `main` accordingly
+
 ## [v1.1.1] - 2023-09-24
 
 ### Added

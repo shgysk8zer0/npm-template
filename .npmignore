@@ -13,6 +13,7 @@ importmap.yaml
 *.gz
 *.tgz
 *.log
+*.bak
 *.min.*
 *.map
 *.env
