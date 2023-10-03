@@ -4,27 +4,29 @@
   "description": "A template repo for npm packages",
   "keywords": [],
   "type": "module",
-  "main": "index.cjs",
-  "module": "index.js",
+  "main": "./cjs/index.cjs",
+  "module": "./index.js",
   "unpkg": "./index.js",
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./cjs/index.cjs"
     },
     "./*.js": {
       "import": "./*.js",
-      "require": "./*.cjs"
+      "require": "./cjs/*.cjs"
     },
     "./*.mjs": {
-      "import": "./*.js"
+      "import": "./*.js",
+      "require": "./cjs/*.cjs"
     },
     "./*.cjs": {
-      "require": "./*.cjs"
+      "import": "./*.js",
+      "require": "./cjs/*.cjs"
     },
     "./*": {
       "import": "./*.js",
-      "require": "./*.cjs"
+      "require": "./cjs/*.cjs"
     }
   },
   "engines": {
@@ -38,7 +40,8 @@
     "lint:js": "eslint .",
     "fix:js": "eslint . --fix",
     "build": "npm run build:js",
-    "build:js": "rollup -c rollup.config.js",
+    "clean": "rm -f ./cjs/*.cjs",
+    "build:js": "npm run clean && rollup -c rollup.config.js",
     "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",
     "version:bump": "npm run version:bump:patch",
     "version:bump:patch": "npm version --no-git-tag-version patch && npm run create:lock",
@@ -66,6 +69,8 @@
   },
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
   "devDependencies": {
-    "@shgysk8zer0/js-utils": "^1.0.1"
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@shgysk8zer0/js-utils": "^1.0.1",
+    "@shgysk8zer0/npm-utils": "^1.1.1"
   }
 }
