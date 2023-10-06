@@ -71,6 +71,6 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.2",
     "@shgysk8zer0/js-utils": "^1.0.1",
-    "@shgysk8zer0/npm-utils": "^1.1.1"
+    "@shgysk8zer0/npm-utils": "^1.1.2"
   }
 }
