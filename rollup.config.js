@@ -1,19 +1,25 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { warningHandler } from '@shgysk8zer0/js-utils/rollup';
-import { listDirByExt } from '@shgysk8zer0/npm-utils/fs';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 
-const modules = await listDirByExt('./', '.js');
-
-export default {
-	input: modules.filter(module => ! module.endsWith('.config.js')),
-	external: [],
-	onwarn: warningHandler,
-	output: {
-		dir: './cjs/',
-		format: 'cjs',
-		preserveModules: true,
-		entryFileNames: '[name].cjs',
-		chunkFileNames: '[name]-[hash].cjs',
-	},
+export default [{
+	input: 'index.js',
 	plugins: [nodeResolve()],
-};
+	output: [{
+		file: 'index.cjs',
+		format: 'cjs',
+	}, {
+		file: 'index.min.js',
+		format: 'iife',
+		plugins: [terser()],
+		sourcemap: true,
+	}, {
+		file: 'index.mjs',
+		format: 'module',
+	}],
+}, {
+	input: 'consts.js',
+	output: {
+		file: 'consts.cjs',
+		format: 'cjs',
+	}
+}];

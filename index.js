@@ -1,1 +1,2 @@
-console.info('This is a template for npm projects.');
+import { MESSAGE } from 'npm-template/consts';
+console.info(MESSAGE);
