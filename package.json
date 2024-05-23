@@ -6,7 +6,7 @@
   "type": "module",
   "main": "./index.cjs",
   "module": "./index.js",
-  "unpkg": "./index.js",
+  "unpkg": "./index.min.js",
   "exports": {
     ".": {
       "import": "./index.js",
