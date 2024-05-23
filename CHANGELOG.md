@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -7,8 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Setup to transpile all `./*.js` to `./cjs/*.cjs` (except `*.config.js`)
+- Update ESLint & super-linter
+- Switch to more basic Rollup config
 - Update `exports` and `main` accordingly
+
+### Fixed
+- Fix missed renaming in README
 
 ## [v1.1.1] - 2023-09-24
 
