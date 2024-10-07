@@ -34,12 +34,13 @@
   },
   "private": false,
   "scripts": {
-    "test": "npm run lint:js && npm run build",
-    "preversion": "npm test",
-    "prepare": "npm run build",
+    "test": "npm run lint:js && npm run run:tests",
+    "preversion": "npm test && npm run build",
+    "prepare": "npm test && npm run build",
     "lint:js": "eslint .",
     "fix:js": "eslint . --fix",
     "build": "npm run build:js",
+    "run:tests": "node --test",
     "clean": "rm -f ./*.cjs",
     "build:js": "npm run clean && rollup -c rollup.config.js",
     "create:lock": "npm i --package-lock-only --ignore-scripts --no-audit --no-fund",
@@ -70,6 +71,7 @@
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.3.0",
+    "@shgysk8zer0/eslint-config": "^1.0.1",
     "@shgysk8zer0/js-utils": "^1.0.2",
     "@shgysk8zer0/npm-utils": "^1.1.3"
   }

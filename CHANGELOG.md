@@ -8,12 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
+- Update node version via `.npmrc`
+- Update Node CI workflow
+- Install & use `@shgysk8zer0/eslint-config`
+- Add support for `node --test`, including ignoring tests for publishing
 - Update ESLint & super-linter
 - Switch to more basic Rollup config
 - Update `exports` and `main` accordingly
 
 ### Fixed
 - Fix missed renaming in README
+
+## Removed
+- Remove old ESLint config files
 
 ## [v1.1.1] - 2023-09-24
 
