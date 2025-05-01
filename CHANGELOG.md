@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.2] - 2025-05-01
+
 ### Changed
+- Use `eslint` & `rollup` directly instead of by other packages
 - Update node version via `.npmrc`
 - Update Node CI workflow
 - Install & use `@shgysk8zer0/eslint-config`
