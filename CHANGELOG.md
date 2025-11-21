@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.3] - 2025-11-21
+
+### Added
+- Add `npm start` script
+
+### Changed
+- Update npm publishing
+
 ## [v1.1.2] - 2025-05-01
 
 ### Changed

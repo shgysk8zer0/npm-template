@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="light dark" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+		<script type="importmap" integrity="{{ INTEGRITY }}">{{ IMPORTMAP }}</script>
+		<script src="{{ POLYFILLS }}" referrerpolicy="no-referrer" crossorigin="anonymous" defer=""></script>
+	</head>
+	<body>
+		<header id="header">
+			<h1>Hello, World!</h1>
+		</header>
+		<nav id="nav"></nav>
+		<main id="main">
+			<details>
+				<summary>Request</summary>
+				<pre>
+					<code>{{ REQUEST }}</code>
+				</pre>
+			</details>
+		</main>
+		<aside id="sidebar"></aside>
+		<footer id="footer"></footer>
+	</body>
+</html>
