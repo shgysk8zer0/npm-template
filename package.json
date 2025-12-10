@@ -71,12 +71,12 @@
   },
   "homepage": "https://github.com/shgysk8zer0/npm-template#readme",
   "devDependencies": {
-    "@aegisjsproject/dev-server": "^1.0.4",
-    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@aegisjsproject/dev-server": "^1.0.5",
+    "@aegisjsproject/http-utils": "^1.0.4",
     "@rollup/plugin-terser": "^0.4.4",
     "@shgysk8zer0/eslint-config": "^1.0.4",
     "@shgysk8zer0/http-server": "^1.1.1",
-    "@shgysk8zer0/importmap": "^1.5.0",
+    "@shgysk8zer0/importmap": "^1.5.1",
     "eslint": "^9.39.1",
     "rollup": "^4.53.3"
   }
