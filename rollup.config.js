@@ -1,9 +1,7 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 
 export default [{
 	input: 'index.js',
-	plugins: [nodeResolve()],
 	output: [{
 		file: 'index.cjs',
 		format: 'cjs',
