@@ -76,7 +76,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@shgysk8zer0/eslint-config": "^1.0.4",
     "@shgysk8zer0/http-server": "^1.1.1",
-    "@shgysk8zer0/importmap": "^1.5.1",
+    "@shgysk8zer0/importmap": "^1.5.3",
     "eslint": "^9.39.1",
     "rollup": "^4.53.3"
   }
