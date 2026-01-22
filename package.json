@@ -78,6 +78,6 @@
     "@shgysk8zer0/http-server": "^1.1.1",
     "@shgysk8zer0/importmap": "^1.7.7",
     "eslint": "^9.39.2",
-    "rollup": "^4.55.1"
+    "rollup": "^4.56.0"
   }
 }
