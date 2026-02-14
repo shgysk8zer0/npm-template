@@ -77,7 +77,7 @@
     "@shgysk8zer0/eslint-config": "^1.0.4",
     "@shgysk8zer0/http-server": "^1.1.1",
     "@shgysk8zer0/importmap": "^1.7.7",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "rollup": "^4.57.1"
   }
 }
