@@ -73,7 +73,7 @@
   "devDependencies": {
     "@aegisjsproject/dev-server": "^1.0.6",
     "@aegisjsproject/http-utils": "^1.0.4",
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "@shgysk8zer0/eslint-config": "^1.0.7",
     "@shgysk8zer0/http-server": "^1.1.1",
     "@shgysk8zer0/importmap": "^1.7.11",
