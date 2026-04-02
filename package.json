@@ -75,8 +75,8 @@
     "@aegisjsproject/http-utils": "^1.0.4",
     "@rollup/plugin-terser": "^1.0.0",
     "@shgysk8zer0/eslint-config": "^1.0.9",
-    "@shgysk8zer0/http-server": "^1.1.1",
-    "@shgysk8zer0/importmap": "^1.8.9",
+    "@shgysk8zer0/http-server": "^1.1.2",
+    "@shgysk8zer0/importmap": "^1.8.10",
     "eslint": "^10.1.0",
     "rollup": "^4.60.0"
   }
