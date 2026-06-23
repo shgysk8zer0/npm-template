@@ -6,6 +6,9 @@
 ###########################
 name: Lint Code Base
 
+permissions:
+  contents: read
+
 #
 # Documentation:
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
@@ -34,10 +37,6 @@ on:
 ###############
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      # matrix:
-      #   language:
     # Name the Job
     name: Lint Code Base
     # Set the agent to run on
@@ -57,8 +56,17 @@ jobs:
       ##########################
       # Checkout the code base #
       ##########################
+      - name: Harden Runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        with:
+          egress-policy: audit
+          allowed-endpoints: >
+            api.github.com:443
+            github.com:443
+            44.226.107.201:443
+
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           # super-linter needs the full git history to get the
           # list of files that changed across commits
@@ -68,7 +76,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: super-linter/super-linter@v8.6.0
+        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918 # v8.7.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # DEFAULT_BRANCH: master
@@ -83,7 +91,7 @@ jobs:
           LINTER_RULES_PATH: './'
           EDITORCONFIG_FILE_NAME: '.editorconfig'
           # JAVASCRIPT_ES_CONFIG_FILE: 'eslint.config.js'
-          CSS_FILE_NAME: '.stylelintrc.json'
+          # CSS_FILE_NAME: '.stylelintrc.json'
 
           # Valate Languages - Uncomment to Enable
           # JS/TS/JSON Disabled until ESLint in super-linter is updated
@@ -93,7 +101,7 @@ jobs:
           # VALIDATE_JAVASCRIPT_STANDARD: true
           # VALIDATE_JSON: true
           # VALIDATE_XML: true
-          # VALIDATE_MARKDOWN: true
+          VALIDATE_MARKDOWN: true
           VALIDATE_YAML: true
           # VALIDATE_TYPESCRIPT_ES: true
           # VALIDATE_TYPESCRIPT_STANDARD: true

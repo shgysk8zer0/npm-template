@@ -7,10 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0] - 2026-06-23
+
 ### Added
+- Add `.npmrc` to harden `npm i` & `npm ci` operations
+- Added `SECURITY.md` for reporting security issues
 - Add `@aegisjsproject/dev-server`
 
 ### Changed
+- Update to node 26.3.0 / npm 11.16.0
+- Update from `publish` to `publish stage`
+- Allow `fsevents` postinstall script
+- Implement security changes provided by SecurityStep
 - Update CSP, template, etc
 
 ## [v1.1.3] - 2025-11-21
