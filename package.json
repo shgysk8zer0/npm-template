@@ -78,7 +78,7 @@
     "@shgysk8zer0/http-server": "^1.1.2",
     "@shgysk8zer0/importmap": "^1.9.20",
     "eslint": "^10.5.0",
-    "rollup": "^4.62.0"
+    "rollup": "^4.62.2"
   },
   "allowScripts": {
     "fsevents@2.3.3": true
