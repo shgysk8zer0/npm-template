@@ -73,12 +73,12 @@
   "devDependencies": {
     "@aegisjsproject/dev-server": "^1.1.0",
     "@aegisjsproject/http-utils": "^1.1.0",
-    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-terser": "^1.0.2",
     "@shgysk8zer0/eslint-config": "^1.1.0",
     "@shgysk8zer0/http-server": "^1.1.2",
     "@shgysk8zer0/importmap": "^1.10.6",
     "eslint": "^10.13.0",
-    "rollup": "^4.64.10"
+    "rollup": "^4.65.0"
   },
   "allowScripts": {
     "fsevents@2.3.3": true
